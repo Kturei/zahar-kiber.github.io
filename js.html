@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Захар Каратаев </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="" class="header-logo">
+        <nav class="header-nav">
+            <a href="index.html">Главная</a>
+            <a href="about.html">Об авторе</a>
+            <a href="modules.html">Модули</a>
+            <a href="my-projects.html">Мои проекты</a>
+        </nav>
+    </header>
+    <main class="container" id="main">
+
+        <H2>Страницы для работы с JS</H2>
+
+        <h3>Первые кнопки с onclick</h3>
+        <!-- кнопка добавления текста -->
+        <p>Функция 1</p>
+        <button type="button" onclick="set_text('1', 'Дарова')">Добавить 1</button>
+        <button type="reset" onclick="reset_text('1')">Убрать 1</button>
+        <p id="1"></p>
+
+        <p>Функция 2</p>
+        <button type="button" onclick="set_text('2', 'hello')">Кнопка 2</button>
+        <button type="button" onclick="reset_text('2')">Убрать 2</button>
+        <p id="2"></p>
+
+
+        <h3>Работа с формами JS</h3>
+        <div class="form">
+            <div class="form">
+                <div class="form__item">
+                    <div class="form__item-title">
+                        ФИО
+                    </div>
+                    <input type="text" placeholder="Иванов Иван Иванович" id="name">
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item-title">
+                        E-mail
+                    </div>
+                    <input type="email" placeholder="email@" id="email">
+                </div>
+
+                <div class="form__item">
+                    <div class="form__item-title">
+                        Телефон обратной связи
+                    </div>
+                    <input type="tel" placeholder="+7" id="phone" value="+7">
+                </div>
+            </div>
+
+            <button type="submit" onclick="submit()">Отправить</button>
+            <p id="status"></p>
+        </div>
+
+        <h3>Изсенение стилей с помощью JS</h3>
+        <h4>Изменения цвета body</h4>
+
+        <div class="form">
+            <div class="form_item">
+                Введите цвет
+                <input type="text" id="color">
+            </div>
+        </div>
+        <button type="button" onclick="set_input_color()" id="color_change">Применить цвет</button>
+        <button type="button" onclick="set_body_color_classic()">Стандартный цвет</button>
+
+        <h3 id="font_size">Изменить размер ширифта</h3>
+        <button type="button" onclick="set_font_size('font_size', '320px')">Изменения ширифта</button>
+
+            <h4>Изменить цвет текста</h4>
+                
+        <div class="form">
+            
+            <div class="form_item">
+                Введите id
+                <input type="text" placeholder="Введите id текста" name="getId" id="textId">
+            </div>
+
+            <div class="form_item">
+                Введите цвет
+                <input type="text" placeholder="Введите цвет или хекс" id="colorText">
+            </div>
+        
+        </div>
+
+        <button type="button" onclick="set_custom_text()">Включить цвет</button>
+        <h4 id="textColor">Текст</h4>
+
+        <h3>Изменения HTML-атрибута с помощью JS</h3>
+        <h4>Изменение атрибутов с помощью JS</h4>
+        <img src="images/pic_bulboff.gif" alt="" id="lamp">
+        <button type="button" onclick="lampOn()">Вкл</button>
+        <button type="button" onclick="lampOff()">Выкл</button>
+
+        <h4>Удаления тегов с помощью JS</h4>
+        <h5 id="title">ЗАГОЛОВОК</h5>
+        <button type="button" onclick="deleteTitle()">Удалить заголовок</button>
+
+        <h4>Добавление тегов с помощью JS</h4>
+        <div id="buttonList">
+            <button type="button" onclick="createButton()">Создать кнопку</button>
+            <!--  -->
+        </div>
+        <div id="Plist">
+            <button type="button" onclick="createP()">Создать абзац</button>
+        </div>
+
+
+        <div id="peregraflist"></div>
+
+        <h3>Объекты JavaScript</h3>
+
+        <button type="button" onclick="showPerson()">Показать объект person</button>
+        <p id="person"></p>
+
+        <button type="button" onclick="showAvto()">Показать авто</button>
+        <p id="avto"></p>
+
+        <button type="button" onclick="cat.showInfo()">Показать кота</button>
+        <p id="cat"></p>
+        
+    </main>
+    <footer>
+        <div class="container">
+            <h3>Карта</h3>
+            <div class="footer_map">
+                <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6343981fa239b3f0d7503b2fa039b576b0df5125ddbea62c8cc972fd6c2f2c31&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+                </script>
+            </div>
+            <p>Сайт разработан резидентом первой международной школы программирования KIBERone - Захар Каратаев (2023)
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

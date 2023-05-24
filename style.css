@@ -1,0 +1,198 @@
+body {
+    background: grey  ;
+    margin: 0;
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+header {
+    background: #1959a9;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.header-nav a {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 20px 20px;
+}
+
+.header-nav a:hover {
+    background: #14498abe;
+}
+
+.header-logo {
+    height: 30px;
+}
+
+footer {
+    background: #1f242b;
+    color: rgb(255, 255, 255);
+    padding: 15px 15px;
+
+}
+
+.container {
+    max-width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+main {
+    background: #ffffff;
+    padding: 10px 35px 35px 35px;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+/* стили для блока галерия */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+/* для телефонов */
+@media only screen and (max-width: 375px){
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* для ноутов */
+@media only screen and (max-width: 375px) and (max-width: 767px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr) ;
+    }
+}
+
+.card {
+    background: #d3d3d3;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: ;
+    -webkit-box-shadow: 4px 14px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 14px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 14px 8px 0px rgba(34, 60, 80, 0.2);
+    scale: 0.9;
+    transition: 0.3s;
+}
+
+.card:hover {
+    scale: 1;
+}
+
+.card__image {
+    width: 100%;
+    height:  150px;
+    border-radius: 10px 10px 0 0 ;
+    overflow: hidden;
+}
+
+.card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__text {
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.card__btn {
+    display: block;
+    background: #dbdbdb;    ;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    scale: 0.9;
+}
+
+.card__btn:hover {
+    background: #dbdbdb;
+    color: #8d8d8d;
+    transition: 0.3s;
+    scale: 1;
+    border-radius: 5px;
+}
+
+.content--half {
+    display: grid;
+    grid-template-columns: 1fr ;
+    column-gap: 20px;
+}
+
+@media only screen and (min-width: 572px) {
+    .content--half {
+        grid-template-columns: 1fr 2fr ;
+    }
+}
+
+.content--half img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Zooi {
+text-align: center;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 427px;
+    border: 1px solid #585858;  
+    
+}
+
+.table tr:nth-child(odd) {
+    background: #c1c1c1;
+}
+
+.table td {
+    padding: 5px 15px;
+}
+
+.table tr td:first-child {
+    font-weight: 800;
+}
+
+.form {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+
+.form__item-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #474747c9;
+    margin-bottom: 9px;
+}
+
+.form input {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #474747c9;
+}
+
+.LOUU {
+    font-weight: 700;
+}
+
+.form__list {
+    display: grid;
+    font-weight: 700;
+    gap: 10px;
+}
